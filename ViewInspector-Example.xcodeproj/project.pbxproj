@@ -11,7 +11,7 @@
 		3D9F9F79273D16A800A9BD72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9F9F78273D16A800A9BD72 /* ContentView.swift */; };
 		3D9F9F7B273D16AA00A9BD72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D9F9F7A273D16AA00A9BD72 /* Assets.xcassets */; };
 		3D9F9F7E273D16AA00A9BD72 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D9F9F7D273D16AA00A9BD72 /* Preview Assets.xcassets */; };
-		3D9F9F88273D16AA00A9BD72 /* ViewInspector_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9F9F87273D16AA00A9BD72 /* ViewInspector_ExampleTests.swift */; };
+		3D9F9F88273D16AA00A9BD72 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9F9F87273D16AA00A9BD72 /* ContentViewTests.swift */; };
 		3D9F9F92273D16AA00A9BD72 /* ViewInspector_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9F9F91273D16AA00A9BD72 /* ViewInspector_ExampleUITests.swift */; };
 		3D9F9F94273D16AB00A9BD72 /* ViewInspector_ExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9F9F93273D16AB00A9BD72 /* ViewInspector_ExampleUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -40,7 +40,7 @@
 		3D9F9F7A273D16AA00A9BD72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D9F9F7D273D16AA00A9BD72 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D9F9F83273D16AA00A9BD72 /* ViewInspector-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ViewInspector-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D9F9F87273D16AA00A9BD72 /* ViewInspector_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInspector_ExampleTests.swift; sourceTree = "<group>"; };
+		3D9F9F87273D16AA00A9BD72 /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
 		3D9F9F8D273D16AA00A9BD72 /* ViewInspector-ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ViewInspector-ExampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D9F9F91273D16AA00A9BD72 /* ViewInspector_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInspector_ExampleUITests.swift; sourceTree = "<group>"; };
 		3D9F9F93273D16AB00A9BD72 /* ViewInspector_ExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInspector_ExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		3D9F9F86273D16AA00A9BD72 /* ViewInspector-ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				3D9F9F87273D16AA00A9BD72 /* ViewInspector_ExampleTests.swift */,
+				3D9F9F87273D16AA00A9BD72 /* ContentViewTests.swift */,
 			);
 			path = "ViewInspector-ExampleTests";
 			sourceTree = "<group>";
@@ -143,6 +143,8 @@
 			dependencies = (
 			);
 			name = "ViewInspector-Example";
+			packageProductDependencies = (
+			);
 			productName = "ViewInspector-Example";
 			productReference = 3D9F9F73273D16A800A9BD72 /* ViewInspector-Example.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +160,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3D9F9FA4273D1B7E00A9BD72 /* PBXTargetDependency */,
 				3D9F9F85273D16AA00A9BD72 /* PBXTargetDependency */,
 			);
 			name = "ViewInspector-ExampleTests";
@@ -215,6 +218,9 @@
 				Base,
 			);
 			mainGroup = 3D9F9F6A273D16A800A9BD72;
+			packageReferences = (
+				3D9F9FA0273D1B1800A9BD72 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = 3D9F9F74273D16A800A9BD72 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D9F9F88273D16AA00A9BD72 /* ViewInspector_ExampleTests.swift in Sources */,
+				3D9F9F88273D16AA00A9BD72 /* ContentViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +297,10 @@
 			isa = PBXTargetDependency;
 			target = 3D9F9F72273D16A800A9BD72 /* ViewInspector-Example */;
 			targetProxy = 3D9F9F8E273D16AA00A9BD72 /* PBXContainerItemProxy */;
+		};
+		3D9F9FA4273D1B7E00A9BD72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 3D9F9FA3273D1B7E00A9BD72 /* ViewInspector */;
 		};
 /* End PBXTargetDependency section */
 
@@ -601,6 +611,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D9F9FA0273D1B1800A9BD72 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D9F9FA3273D1B7E00A9BD72 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D9F9FA0273D1B1800A9BD72 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3D9F9F6B273D16A800A9BD72 /* Project object */;
 }
