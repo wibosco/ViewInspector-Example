@@ -7,25 +7,19 @@
 
 import XCTest
 import ViewInspector
+import SwiftUI
 
 @testable import ViewInspector_Example
 
+extension ContentView: Inspectable { }
+
 class ContentViewTests: XCTestCase {
     
-    var sut: ContentView!
-    
-    // MARK: - Lifecycle
-    
-    override func setUpWithError() throws {
-        sut = ContentView()
-    }
+    // MARK: - Tests
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test_labelHasValue() throws {
+        let sut = ContentView()
+        let value = try sut.inspect().text().string()
+        XCTAssertEqual(value, "Hello, world!")
     }
 }
